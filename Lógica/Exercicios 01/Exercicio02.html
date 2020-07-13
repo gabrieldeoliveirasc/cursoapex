@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+var pedido =prompt("Informe o numero correrpondente ao pedido")
+var valor
+
+if (pedido ==1){
+    document.write("Pizza R$ 12,00") 
+    valor = 12
+}if (pedido ==2){
+    document.write("Pão de queijo R$ 4,00")
+    valor = 4
+}if (pedido ==3){
+    document.write("Macarrão R$ 16,00")
+    valor = 16
+}if (pedido ==4){
+    document.write("Pastel R$ 4,50")
+    valor = 4.5
+}
+
+var dinheiro =parseInt(prompt("informe o valor pago"))
+
+if (valor <= dinheiro){
+    document.write("Troco R$" + (dinheiro - valor))
+}
+
+
+
+
+
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
