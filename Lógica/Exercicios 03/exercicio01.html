@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+// Matriz
+var dados = []
+
+// Cadastrar produtos
+function cadastrar(){
+
+// Obter os elementos HTML
+var nome = document.getElementById("nome")
+var materia = document.getElementById("materia")
+var nota01 = document.getElementById("nota01")
+var nota02 = document.getElementById("nota02")
+var media = (parseInt(nota01.value) + parseInt(nota02.value)) /2
+
+// Validações
+
+if(nome.value == ""){
+    alert("Informe o nome do aluno")
+}else if(materia.value == "Materia"){
+    alert("Informe a meteria")
+}else if(nota01.value == ""){
+    alert("Informe a primeira nota")
+}else if(isNaN(nota01.value)){
+    alert("Informe um valor válido")
+}else if(nota02.value == ""){
+    alert("Informe a segunda nota")
+}else if(isNaN(nota02.value)){
+    alert("Informe um valor válido")
+}else{
+
+// Cadastrar na matriz
+dados.push([nome.value, materia.value, nota01.value, nota02.value])
+
+// Limpar dados
+
+nome.value =""
+materia.value ="materia"
+nota01.value =""
+nota02.value =""
+
+//Selecionar cada produto
+produto.focus()
+
+//Atualizar tabela
+listar()}
+}
+
+// Listar produtos
+function listar(){
+
+// Obter o elemento lista
+var lista = document.getElementById("lista")
+
+// Limpar
+lista.innerHTML = ""
+
+// Laço
+for(var indice = 0; indice < dados.lenght; indice++){
+
+
+
+
+
+}
+
+}
+
+
+
+
+
+    </script>
+</head>
+<body>
+    
+
+
+
+
+
+<!-- Formulário -->
+<form>
+
+<input type="text" id="nome" placeholder="Nome do aluno" class="form-control">
+
+<select id="materia" class="form-control">
+    <option>Materia</option>
+    <option>Português</option>
+    <option>Matemática</option>
+    <option>Geografia</option>
+    <option>História</option>
+    <option>Inglês</option>
+    <option>Biologia</option>
+    <option>Filosofia</option>
+</select>
+
+<input type="text" id="nota01" placeholder="Nota 01" class="form-control">
+<input type="text" id="nota02" placeholder="Nota 02" class="form-control">
+
+<input type="button" onclick="cadastrar()" value="Cadastrar" class="btn btn-primary"> 
+
+</form>
+
+<!-- Tabela-->
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+        <th>Nome do aluno</th>
+        <th>Materia</th>
+        <th>Nota 01</th>
+        <th>Nota 02</th>
+        <th>Média</th>
+    </tr>
+    </thead>
+
+
+</body>
+</html>
